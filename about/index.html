@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script src="../cdn-cgi/apps/head/1VJdvzDQGw8dlDO-hECL9jUfM9Q.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+
+	<title>60 Days to Stop a War</title>
+
+		<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="msapplication-TileImage" content="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/ms-tile.png">
+	<meta name="msapplication-TileColor" content="#ef0303">
+	<link rel="shortcut icon" sizes="196x196" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-android-highres.png">
+	<link rel="shortcut icon" sizes="128x128" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-android.png">
+	<link rel="apple-touch-icon" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-ios-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-ios-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-ios-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://60daystostopawar.com/wp-content/themes/sixtydaystostopawar/images/touch-ios-ipad-retina.png">
+	<link rel="shortcut icon" href="../wp-content/themes/sixtydaystostopawar/favicon.ico">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+	<script>window.jQuery || document.write("<script src='../wp-content/themes/bower_components/jquery/dist/jquery.min.js'>\x3C/script>")</script>
+	<script src="../wp-content/themes/sixtydaystostopawar/js/vendor/modernizr.custom.min.js"></script>
+	<script src="../wp-content/themes/bower_components/picturefill/dist/picturefill.min.js" type="text/javascript"></script>
+	<link rel="alternate" type="application/rss+xml" title="60 Days to Stop a War RSS Feed" href="../feed/index.html">
+	
+<!-- This site is optimized with the Yoast SEO plugin v10.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Republicans and war hawks are working to sabotage diplomacy and lead us into another disastrous war in the Middle East. We can stop them--and achieve peace with Iran, if we take action this month."/>
+<link rel="canonical" href="../index.html%3Fp=41.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://60daystostopawar.com/files/2015/08/Facebook.png" />
+<meta property="og:image:secure_url" content="https://60daystostopawar.com/files/2015/08/Facebook.png" />
+<meta property="og:image" content="https://60daystostopawar.com/files/2015/08/Twitter.png" />
+<meta property="og:image:secure_url" content="https://60daystostopawar.com/files/2015/08/Twitter.png" />
+<meta property="og:title" content="60 Days to Stop a War" />
+<meta property="og:description" content="Republicans and war hawks are working to sabotage diplomacy and lead us into another disastrous war in the Middle East. We can stop them--and achieve peace with Iran, if we take action this month." />
+<meta property="og:url" content="https://60daystostopawar.com/about/" />
+<meta property="og:site_name" content="60 Days to Stop a War" />
+<meta property="og:image" content="https://60daystostopawar.com/files/2015/08/Twitter.png" />
+<meta property="og:image:secure_url" content="https://60daystostopawar.com/files/2015/08/Twitter.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Republicans and war hawks are working to sabotage diplomacy and lead us into another disastrous war in the Middle East. We can stop them--and achieve peace with Iran, if we take action this month." />
+<meta name="twitter:title" content="60 Days to Stop a War" />
+<meta name="twitter:image" content="https://60daystostopawar.com/files/2015/08/Twitter.png" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="60 Days to Stop a War &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="60 Days to Stop a War &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="text/calendar" title="60 Days to Stop a War &raquo; iCal Feed" href="../events/index.html%3Fical=1" />
+<link rel="alternate" type="application/rss+xml" title="60 Days to Stop a War &raquo; About Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min.css%3Fver=5.1.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='screen-css'  href='../wp-content/themes/sixtydaystostopawar/style.css%3Fver=5.1.1.css' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel='shortlink' href='../index.html%3Fp=41.html' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed-about" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed-about-xml" />
+<script src="https://d3c3cq33003psk.cloudfront.net/opentag-74688-1323714.js" async defer></script><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://60daystostopawar.com"><link rel="https://theeventscalendar.com/" href="../wp-json/tribe/events/v1/index.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="page-template page-template-interior page-template-interior-php page page-id-41 tribe-no-js tribe-theme-sixtydaystostopawar">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+		<div id="container">
+			<header id="header-container" role="banner">
+				<div  id="header-content">
+					<div id="logo">
+						<h1><a href="../index.html"><img src="../wp-content/themes/sixtydaystostopawar/images/logo.png" alt="60 Days to Stop a War" /></a><h1>
+					</div>
+					<ul class="social-menu">
+						<li class="twitter"><a target="_blank" href="https://twitter.com/home?status=Congress%20will%20vote%20soon%20on%20war%20or%20diplomacy%20with%20Iran.%20Call%20Congress%3A%20http%3A//bit.ly/1MNi8am%20%23NoWarWithIran"><i class="fa fa-twitter"></i> <span>Share on Twitter</span></a></li>
+						<li class="facebook"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=60daystostopawar.com"><i class="fa fa-facebook"></i> <span>Share on Facebook</span></a></li>
+						<li class="countdown">
+							<div>
+								<span>0 Days </span> Remaining							</div>
+						</li>
+					</ul>
+					<div class="navigation">
+						<div class="menu-toggle-container">
+							<div class="menu-toggle">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<nav class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-995"><a href="http://civ.moveon.org/feedback/press/">Media Contact</a></li>
+<li id="menu-item-994" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-41 current_page_item menu-item-994"><a href="../index.html%3Fp=41.html" aria-current="page">About</a></li>
+<li id="menu-item-2085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2085"><a href="../index.html%3Fp=2073.html">Download the Report</a></li>
+</ul></nav>					</div>
+				</div>
+			</header>
+<section id="content" role="main">
+				<article class="post" id="post-41">
+				<div class="interior-container">
+					<div class="main-content">
+						<h2>About</h2>
+						<p>Why 60 Days to Stop a War?</p>
+<p>Republicans are trying to start a war with Iran by rejecting the historic deal announced by the U.S., Iran and five other world powers that will prevent Iran from obtaining a nuclear weapon. Republicans can&#8217;t start their war without votes from Democrats.</p>
+<p>A 60-day clock started ticking the moment negotiators announced the Iran deal and submitted it to Congress, meaning Congress will vote on whether to approve or derail this historic agreement in early September.</p>
+<p>Experts agree that without this agreement, we could face a new war in the Middle East. We have 60 days to defend diplomacy and stop a war.</p>
+<p><a href="https://60daystostopawar.com/wp-content/uploads/2015/09/60DaysToStopAWar_Report_MoveOn_090315.pdf">Download the report of how we defended diplomacy in 60 days.</a></p>
+<p>&nbsp;</p>
+<p>Technical problems using this site? You may email: <span class="gI">60dayshub@moveon.org.</span></p>
+					</div>
+				</div>
+		</article>
+
+		
+	</section>
+
+<footer>
+	<div class="container">
+
+		<div class="poweredBy">
+			<p>Powered by</p>
+			<a href="http://moveon.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/moveon_cut_360.png" alt="MoveOn" /></a>
+		</div>
+		<ul class="partners">
+			<li>
+				<div class="">
+					<div>
+						<a href="http://credoaction.com/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/credo_cut_360.png" alt="Credo" /></a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.dailykos.com/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/daily_kos_cut_720.png" alt="Daily Kos" /></a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://democracyforamerica.com/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/dfa_cut_360.png" alt="Democracy for America" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.niacaction.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/niac_cut_720.png" alt="NIAC Action" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.peace-action.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/peace_action_dove_cut_720.png" alt="Peace Action" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.peaceactionwest.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/peace_action_west_cut_360.png" alt="Peace Action - West" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://winwithoutwar.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/win_without_war_cut_720.png" alt="Win Without War" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://livableworld.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/council_for_a_livable_world_cut_720.png" alt="Council for a Livable World" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.wandactioncenter.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/wand_cut_245.png" alt="WAND" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://justforeignpolicy.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/jfp_cut_128.png" alt="Just Foreign Policy" />
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="">
+					<div>
+						<a href="http://www.unitedforpeace.org/" target="_blank"><img src="../wp-content/themes/sixtydaystostopawar/images/logos/upfj_cut.png" alt="United for Peace &amp; Justice" />
+					</div>
+				</div>
+			</li>
+		</ul>
+				<!-- <p><a href="https://60daystostopawar.com/feed/">Entries (RSS)</a></p> -->
+
+	</div>
+</footer>
+
+</div> <!--! end of #container -->
+
+<script defer src="../wp-content/themes/sixtydaystostopawar/js/main.min.js%3Fv=1553702537"></script>
+<script type="application/javascript">
+	Modernizr.load ({
+	test : Modernizr.mq('only all') ,
+	nope : ['/wp-content/themes/bower_components/respond/dest/respond.min.js']
+});
+</script>
+
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};var tribe_system_info = {"sysinfo_optin_nonce":"097b0d55f9","clipboard_btn_text":"Copy to clipboard","clipboard_copied_text":"System info copied","clipboard_fail_text":"Press \"Cmd + C\" to copy"};/* ]]> */ </script><script type='text/javascript' src='../wp-includes/js/wp-embed.min.js%3Fver=5.1.1'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2a1ef86838","applicationID":"104088834","transactionName":"Y1daZhYCCkJUBkJcWlodeVEQCgtfGgxYQVBGW1dA","queueTime":0,"applicationTime":140,"atts":"TxBZEF4YGUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
