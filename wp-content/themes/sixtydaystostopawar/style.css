@@ -701,7 +701,7 @@ legend {
 @font-face {
 	font-family: 'SourceSansPro-Bold';
 	src: url("fonts/SourceSansPro-Bold.eot");
-	src: url("fonts/SourceSansPro-Bold.eot%3F") format("embedded-opentype"), url("fonts/SourceSansPro-Bold.woff") format("woff"), url("fonts/SourceSansPro-Bold.ttf") format("truetype");
+	src: url("fonts/SourceSansPro-Bold.eot?") format("embedded-opentype"), url("fonts/SourceSansPro-Bold.woff") format("woff"), url("fonts/SourceSansPro-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -709,7 +709,7 @@ legend {
 @font-face {
 	font-family: 'SourceSansPro-SemiBold';
 	src: url("fonts/SourceSansPro-Semibold.eot");
-	src: url("fonts/SourceSansPro-Semibold.eot%3F") format("embedded-opentype"), url("fonts/SourceSansPro-Semibold.woff") format("woff"), url("fonts/SourceSansPro-Semibold.ttf") format("truetype");
+	src: url("fonts/SourceSansPro-Semibold.eot?") format("embedded-opentype"), url("fonts/SourceSansPro-Semibold.woff") format("woff"), url("fonts/SourceSansPro-Semibold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -717,7 +717,7 @@ legend {
 @font-face {
 	font-family: 'SourceSansPro-Regular';
 	src: url("fonts/SourceSansPro-Regular.eot");
-	src: url("fonts/SourceSansPro-Regular.eot%3F") format("embedded-opentype"), url("fonts/SourceSansPro-Regular.woff") format("woff"), url("fonts/SourceSansPro-Regular.ttf") format("truetype");
+	src: url("fonts/SourceSansPro-Regular.eot?") format("embedded-opentype"), url("fonts/SourceSansPro-Regular.woff") format("woff"), url("fonts/SourceSansPro-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -725,7 +725,7 @@ legend {
 @font-face {
 	font-family: 'SourceSansPro-Black';
 	src: url("fonts/SourceSansPro-Black.eot");
-	src: url("fonts/SourceSansPro-Black.eot%3F") format("embedded-opentype"), url("fonts/SourceSansPro-Black.woff") format("woff"), url("fonts/SourceSansPro-Black.ttf") format("truetype");
+	src: url("fonts/SourceSansPro-Black.eot?") format("embedded-opentype"), url("fonts/SourceSansPro-Black.woff") format("woff"), url("fonts/SourceSansPro-Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
 }
@@ -733,7 +733,7 @@ legend {
 @font-face {
 	font-family: 'FontAwesome';
 	src: url("fonts/fontawesome-webfont.eot");
-	src: url("fonts/fontawesome-webfont.eot%3F") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2%3Fv=4.4.0") format("woff2"), url("fonts/fontawesome-webfont.woff%3Fv=4.4.0") format("woff"), url("https://60daystostopawar.com/wp-content/themes/fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("https://60daystostopawar.com/wp-content/themes/fonts/fontawesome-webfont.svg?v=4.4.0") format("svg");
+	src: url("fonts/fontawesome-webfont.eot?") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("https://60daystostopawar.com/wp-content/themes/fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("https://60daystostopawar.com/wp-content/themes/fonts/fontawesome-webfont.svg?v=4.4.0") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
